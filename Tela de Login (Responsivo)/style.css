@@ -1,0 +1,314 @@
+
+/*Fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+/**************************************/
+
+/*Corpo*/
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.main-login {
+    width: 100vw;    /*view port widht*/
+    height: 100vh;    /*view port height*/
+    display: flex;     /* coisas ficam lado a lado*/
+    justify-content: center;    /*Centraliza no eixo X*/
+    align-items: center;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);/*gradient*/
+}
+/*************************************/
+
+/*Parte Esquerda(inicio)*/
+    .left-login {
+        width: 50vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /*Cores*/
+        color: #77ffc0;
+        background-color: #201b2c;
+        background-image: linear-gradient(180deg, #201b2c 8%, #000000 100%);
+        border-radius: 0px 50px 50px 0px;
+    }
+
+    .left-login > h1 {
+        /*Cor,Back*/
+        font-size: 3vw;
+        color: white;
+        background-color: #0093E9;
+        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);        
+        padding: 10px 40px 10px 40px;
+        border-radius: 10px;
+        margin-bottom: 100px;
+    }
+    .left-login > h2 {
+        font-size: 2vw;
+        color: white;
+    }
+
+    .left-login-image {
+        width: 20vw;
+        
+    }
+/************************************************/
+
+/*Parte Direita(inicio)*/
+    .right-login {
+        width: 50vw;
+        height: 70vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /*Nav-bar*/
+  
+    .Navbar {
+       width: 20;
+       height: auto;
+       margin-bottom: 40px ;
+    }
+    
+    .Navbar a {
+       color: white;
+       justify-content: space-between;
+       text-decoration: none;
+       padding: 10px;
+    }
+    .Info {
+        background-color: #00DBDE;
+        background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+        border-radius: 20px;
+    }
+
+    /*Cartão*/
+    .card-login {
+        width: 60%;
+        /*usar height automatico*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px 35px; /*primeiro valor referente ao eixo Y,segundo para o X*/
+        background-color: #201b2c;
+        background-image: linear-gradient(180deg, #201b2c 8%, #000000 100%);
+        border-radius: 20px;
+        box-shadow: 0px 10px 40px #00000056; /*0px > X 10px > Y 40px > blur 4 valor> cor */
+    }
+    .card-login > h1 {    
+        font-weight: 800; /* peso da fonte,espessura*/
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    /*Area dentro do input*/
+    .textfield {
+        width: 100%;
+        display: flex;
+        flex-direction: column;/* inverte a posicao do just e do aling*/
+        align-items: flex-start;
+        justify-content: center;
+        margin: 10px 0px;
+    }
+    .textfield > input {
+        width: 100%;
+        border-radius: 10px;
+        border: none;
+        padding: 15px; /* adicionando em apenas um valor altera os dois X,Y*/
+        background: #514869;
+        color: #f0ffffde;
+        font-size: 12pt;/* pt= unidade de medida*/
+        box-shadow: 0px 10px 40px #00000056;
+        outline: none; /*retira a linha envolto*/
+        box-sizing: border-box;/*Adicionar um limite de tamanho entre as bordas*/
+    }
+    .textfield > label {
+        color: #f0ffffde;
+        margin-bottom: 10px;
+    }
+    .textfield > input::placeholder {  /*:: chamar*/
+        color: #f0ffff94;
+    }
+
+    /*Botão*/
+    .btn-login{
+        width: 100%;
+        padding: 16px 0px;
+        margin: 25px;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        text-transform: uppercase; /*Transforma o texto*/
+        font-weight: 800;
+        letter-spacing: 3px; /*Espaço entre as letras*/
+        color: #2b134b;
+        background-color: #00DBDE;
+        background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+        cursor: pointer;
+        box-shadow: 0px 10px 40px -12px #FC00FF;
+    }
+/*////////////////////////////////////////////////////////////////////////////////////////*/
+
+  /*RESPONSIVIDADE*/
+
+  /*Telas grandes(Computador,notebook,tv)*/
+   @media (max-width: 900px){
+       /*Tamanhos das Fontes*/
+        a {
+         font-size:12px;
+        }
+        h1 {
+         font-size:20px;
+        }
+        h2 {
+            font-size:19px;
+        }
+     /**********************/
+
+     /*Parte Esquerda*/
+     .left-login {
+         width: 40%;    
+     }
+     /**************/
+
+     /*Parte Direita*/
+        .right-login {
+         width: 60%;
+        }
+        /*Cartão*/
+        .card-login {
+            width: 226px;
+            height: 290px;
+        }
+        /*Usuario e Senha */
+        .textfield {
+            width: 90%;   
+        }
+        .textfield > input {
+            font-size:10px;
+        }
+        .textfield > label {
+            font-size:12px;
+        }
+        /*Botão(Registre-se)*/
+        .btn-login {
+             width: 80%;
+             font-size: 12px;
+         }
+   }
+/*///////////////////////////////////////*/
+
+   /*Telas Médias(Tablet,ipad)*/
+   @media (max-width: 580px){
+       /*Tamanhos das Fontes*/
+    a {
+        font-size:9px;
+    }
+    h1 {
+        font-size:16px;
+    }
+    h2 { 
+        font-size:19px;
+    }
+    /************************/
+    
+    /*Parte Esquerda*/
+    .left-login {
+        width: 40%;
+    }
+
+    /***************/
+
+    /*Parte Direita*/
+
+    .right-login {
+        width: 60%;
+    }
+    /*Cartão*/
+    .card-login {
+        width: 180px;
+        height: 250px; 
+    }
+
+    /*Usuario e Senha*/
+    .textfield {
+        width: 80%;
+    }
+    .textfield > input {
+        font-size:10px;
+    }
+    .textfield > label {
+        font-size:12px; 
+    }
+
+    /*Botão (Registre-se)*/
+    .btn-login {
+        width: 70%;
+        font-size: 10px;
+    }
+  }
+  /*/////////////////////////////////*/
+
+
+  /*Telas Pequenas(Smartphones)*/
+  @media (max-width: 460px){
+      /*Tamanho das Fontes*/
+      .Navbar a {
+            font-size: 7px;
+        }
+        .Navbar h1 {
+            font-size:16px;
+        }
+        .Navbar h2 {
+            font-size:19px;
+        }
+   
+    /************************/
+    /*Parte Esquerda*/
+    .left-login {
+        width: 30%;
+    }
+    .left-login h1 {
+        width: 30%;
+    }
+   /********************/
+
+   /*Parte Direita*/
+
+   .right-login{
+       width: 70%;
+   }
+    /*Cartão*/
+    .card-login
+    {
+        width: 145px;
+        height: 245px;
+    }
+    /*Usuario e Senha*/
+    .textfield {
+       width: 80%;
+    }
+    .textfield > input {
+        font-size:10px;
+    }
+    .textfield > label {
+        font-size:12px;
+    }
+
+   /*Botão*/
+    .btn-login {
+        width: 70%;
+        font-size: 8px;
+    }
+  }
+/*///////////////////////////////////////*/
+
+
+   
+   
